@@ -103,10 +103,9 @@ export const APPS_DATA = [
       'Dynamic Dark / Light Themes: Sleek, high-contrast dark UI tailored for kitchen tablet and phone use'
     ],
     screenshots: [
-      'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&auto=format&fit=crop&q=80'
+      './screenshots/cooklet/home.png',
+      './screenshots/cooklet/tips.png',
+      './screenshots/cooklet/discover.png'
     ],
     changelog: [
       {
