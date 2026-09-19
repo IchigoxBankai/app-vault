@@ -126,7 +126,12 @@ export const AppDetails = ({ onDownload }) => {
           </div>
           <div className="p-2.5 rounded-xl bg-[#F7F8F5] border border-[#EDF0ED] space-y-0.5">
             <span className="text-[#6F7772] block text-[10px] uppercase font-bold tracking-wider">File Size</span>
-            <span className="font-semibold text-[#202522]">{app.size || 'Universal'}</span>
+            <span className="font-semibold text-[#202522] block">{app.size || 'Universal'}</span>
+            {app.sizeBytes && (
+              <span className="text-[10px] text-[#6F7772] font-mono block">
+                {app.sizeBytes.toLocaleString()} B
+              </span>
+            )}
           </div>
           <div className="p-2.5 rounded-xl bg-[#F7F8F5] border border-[#EDF0ED] space-y-0.5">
             <span className="text-[#6F7772] block text-[10px] uppercase font-bold tracking-wider">Target SDK</span>
