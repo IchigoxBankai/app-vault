@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #F7F8F5 !important;
+    color: #202522 !important;
+  }
+  
+  body {
+    background-color: #F7F8F5 !important;
+    color: #202522 !important;
+    overflow-x: hidden;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    background-color: #F7F8F5 !important;
+    color: #202522 !important;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #202522;
+  }
+
+  p {
+    color: #6F7772;
+  }
+
+  /* Smooth scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F7F8F5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #D8E0DA;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5B9C8D;
+  }
+}
+
+@layer utilities {
+  /* Subtle soft paper/canvas texture */
+  .bg-subtle-pattern {
+    background-image: radial-gradient(#5B9C8D 0.6px, transparent 0.6px);
+    background-size: 28px 28px;
+    opacity: 0.18;
+  }
+
+  /* Soft card */
+  .vault-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E1E6E2;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(30, 45, 35, 0.05);
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
+  }
+
+  .vault-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 38px rgba(30, 45, 35, 0.09);
+    border-color: #CBD6CF;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
