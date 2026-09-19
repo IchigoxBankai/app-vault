@@ -279,8 +279,8 @@ export const APPS_DATA = [
     name: 'SpendLens',
     tagline: 'Smart Expense Tracker, Receipt Scanner & Predictive Financial Insight Engine',
     description: 'SpendLens is an offline-first personal finance tracker and intelligent expense manager for Android. Built with Flutter, it features automated recurring subscription detection, on-device OCR receipt scanning, smart budget analytics, spending forecast insights, and exportable financial reports — keeping all financial data 100% private on your device.',
-    icon: './spendlens-icon.svg',
-    banner: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&auto=format&fit=crop&q=80',
+    icon: './spendlens-logo.png',
+    banner: './screenshots/spendlens/home.png',
     category: 'productivity',
     techStack: ['Flutter', 'Dart', 'Insight Engine', 'OCR Receipt Scanner', 'SQLite', 'Material 3'],
     version: '1.0.0',
@@ -313,9 +313,10 @@ export const APPS_DATA = [
       'Zero-Telemetry Local Privacy: All transaction ledgers and receipts stay strictly encrypted on-device'
     ],
     screenshots: [
-      'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&auto=format&fit=crop&q=80'
+      './screenshots/spendlens/home.png',
+      './screenshots/spendlens/transactions.png',
+      './screenshots/spendlens/insights.png',
+      './screenshots/spendlens/subscriptions.png'
     ],
     changelog: [
       {
