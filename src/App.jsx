@@ -10,6 +10,7 @@ import { About } from './pages/About';
 import { DownloadModal } from './components/DownloadModal';
 import { SubmitAppModal } from './components/SubmitAppModal';
 import { QuickSearchModal } from './components/QuickSearchModal';
+import { SplashScreen } from './components/SplashScreen';
 
 // Scroll to top on route navigation
 const ScrollToTop = () => {
@@ -21,6 +22,7 @@ const ScrollToTop = () => {
 };
 
 export function App() {
+  const [showSplash, setShowSplash] = useState(true);
   const [downloadApp, setDownloadApp] = useState(null);
   const [isSubmitOpen, setIsSubmitOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -43,6 +45,11 @@ export function App() {
   return (
     <div className="min-h-screen flex flex-col bg-[#F7F8F5] text-[#202522] relative selection:bg-[#5B9C8D]/20 selection:text-[#5B9C8D] font-sans">
       <ScrollToTop />
+
+      {/* Animated Splash Screen on App Mount */}
+      {showSplash && (
+        <SplashScreen onFinish={() => setShowSplash(false)} />
+      )}
 
       {/* Navbar */}
       <Navbar 
