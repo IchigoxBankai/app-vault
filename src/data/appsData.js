@@ -212,69 +212,6 @@ export const APPS_DATA = [
     ]
   },
   {
-    id: 'decideflow',
-    name: 'DecideFlow',
-    tagline: 'Rule-Based Decision Engine, Smart Flowchart Navigator & Matrix Evaluator',
-    description: 'DecideFlow is a native Android decision support application built with modern Kotlin and Jetpack Compose. Powered by an intelligent Rule-Based Decision Engine, DecideFlow helps users eliminate decision fatigue, structure complex dilemmas through guided decision trees, score outcomes objectively, and track past conclusions with local offline persistence.',
-    icon: './decideflow-icon.svg',
-    banner: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=1200&auto=format&fit=crop&q=80',
-    category: 'productivity',
-    techStack: ['Kotlin', 'Jetpack Compose', 'Rule Engine', 'Material 3', 'Coroutines', 'Android SDK'],
-    version: '1.0.0',
-    versionCode: 1,
-    size: '17.09 MB',
-    sizeBytes: 17920671,
-    developer: 'Nihar Puthran',
-    packageName: 'com.decideflow.app',
-    minAndroid: 'Android 8.0 (API 26+)',
-    targetAndroid: 'Android 14 (API 34)',
-    architecture: 'Universal / ARM64',
-    releaseDate: '19 Sep 2026',
-    lastUpdated: '19 Sep 2026',
-    rating: 5.0,
-    reviewCount: 14,
-    downloads: '250+',
-    status: 'Completed',
-    apkUrl: 'https://github.com/IchigoxBankai/Decide-Flow/releases/download/decideflow/app-debug.apk',
-    githubUrl: 'https://github.com/IchigoxBankai/Decide-Flow',
-    isFeatured: true,
-    isTrending: true,
-    isNew: true,
-    sha256: '7e2c918a45b84c8a2b3491f618a8047ce562148d1e2e92c0199e4f51390d4f20',
-    tags: ['Kotlin', 'Jetpack Compose', 'Decision Engine', 'Productivity', 'Android'],
-    features: [
-      'Rule-Based Decision Engine: Evaluates complex choices, criteria weighting, and branch conditions to calculate high-confidence recommendations',
-      'Visual Decision Trees & Flow Logic: Create custom branching flowcharts to navigate multifaceted decisions step-by-step',
-      'Zero Decision Fatigue: Guided questionnaire mode simplifies difficult trade-offs into quick yes/no logic checks',
-      'Local Offline History & Journal: Archive decision logs, rationale, and outcome retrospectives privately on-device',
-      'Modern Jetpack Compose UI: Smooth Material 3 interface with intuitive drag-and-drop hierarchy and dark/light themes'
-    ],
-    screenshots: [
-      'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80'
-    ],
-    changelog: [
-      {
-        version: 'v1.0.0',
-        date: '19 Sep 2026',
-        notes: [
-          'Initial public release of DecideFlow debug build APK for Android',
-          'Rule-Based Decision Engine core logic module',
-          'Interactive decision tree builder and questionnaire interface',
-          'Jetpack Compose Material 3 dark/light responsive layout',
-          'Offline decision archiving & criteria scoring matrix'
-        ]
-      }
-    ],
-    permissions: [
-      {
-        name: 'android.permission.INTERNET',
-        description: 'Optional network connectivity for syncing release updates and export templates.'
-      }
-    ]
-  },
-  {
     id: 'spendlens',
     name: 'SpendLens',
     tagline: 'Smart Expense Tracker, Receipt Scanner & Predictive Financial Insight Engine',
