@@ -81,30 +81,44 @@
   }
 }
 
-/* Animations */
+/* Refined Splash & App Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes spinSlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
 }
 
-@keyframes bounceSubtle {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+@keyframes pulseExpand {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+@keyframes shimmerSweep {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(200%) rotate(25deg); }
+}
+
+@keyframes softGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.08); }
 }
 
 .animate-fade-in {
   animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.animate-spin-slow {
-  animation: spinSlow 12s linear infinite;
+.animate-float-gentle {
+  animation: floatGentle 4s ease-in-out infinite;
 }
 
-.animate-bounce-subtle {
-  animation: bounceSubtle 2.5s ease-in-out infinite;
+.animate-pulse-expand {
+  animation: pulseExpand 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.animate-soft-glow {
+  animation: softGlow 4.5s ease-in-out infinite;
 }
