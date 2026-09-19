@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sl-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAF1EC" />
+      <stop offset="100%" stop-color="#DCE6DF" />
+    </linearGradient>
+    <linearGradient id="sl-lens" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B9C8D" />
+      <stop offset="100%" stop-color="#387466" />
+    </linearGradient>
+    <linearGradient id="sl-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#5B9C8D" />
+    </linearGradient>
+  </defs>
+
+  <!-- Card Background -->
+  <rect width="100" height="100" rx="22" fill="url(#sl-bg)" stroke="#CBD6CF" stroke-width="2"/>
+  
+  <!-- Outer Focus Ring (Lens) -->
+  <circle cx="48" cy="48" r="28" fill="white" stroke="#5B9C8D" stroke-width="3" />
+  <circle cx="48" cy="48" r="22" fill="none" stroke="#E1E6E2" stroke-width="1.5" stroke-dasharray="3,3" />
+
+  <!-- Currency / Trend Sparkline Inside Lens -->
+  <!-- Trend Path -->
+  <path d="M34 56 L42 46 L48 50 L60 36" fill="none" stroke="url(#sl-lens)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Peak Data Point with Glow -->
+  <circle cx="60" cy="36" r="3.5" fill="#5B9C8D" />
+  <circle cx="60" cy="36" r="6" fill="#5B9C8D" opacity="0.25" />
+
+  <!-- Lens Glass Reflection Accent -->
+  <path d="M36 34 A20 20 0 0 1 58 28" fill="none" stroke="#5B9C8D" stroke-width="2" stroke-linecap="round" opacity="0.4" />
+
+  <!-- Lens Handle / Analyzer Arm -->
+  <path d="M68 68 L82 82" stroke="#387466" stroke-width="5" stroke-linecap="round" />
+  <circle cx="82" cy="82" r="3" fill="#387466" />
+</svg>

@@ -273,6 +273,77 @@ export const APPS_DATA = [
         description: 'Optional network connectivity for syncing release updates and export templates.'
       }
     ]
+  },
+  {
+    id: 'spendlens',
+    name: 'SpendLens',
+    tagline: 'Smart Expense Tracker, Receipt Scanner & Predictive Financial Insight Engine',
+    description: 'SpendLens is an offline-first personal finance tracker and intelligent expense manager for Android. Built with Flutter, it features automated recurring subscription detection, on-device OCR receipt scanning, smart budget analytics, spending forecast insights, and exportable financial reports — keeping all financial data 100% private on your device.',
+    icon: './spendlens-icon.svg',
+    banner: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&auto=format&fit=crop&q=80',
+    category: 'productivity',
+    techStack: ['Flutter', 'Dart', 'Insight Engine', 'OCR Receipt Scanner', 'SQLite', 'Material 3'],
+    version: '1.0.0',
+    versionCode: 1,
+    size: '58.79 MB',
+    sizeBytes: 61647210,
+    developer: 'Nihar Puthran',
+    packageName: 'com.spendlens.app',
+    minAndroid: 'Android 8.0 (API 26+)',
+    targetAndroid: 'Android 14 (API 34)',
+    architecture: 'Universal',
+    releaseDate: '19 Sep 2026',
+    lastUpdated: '19 Sep 2026',
+    rating: 5.0,
+    reviewCount: 22,
+    downloads: '400+',
+    status: 'Completed',
+    apkUrl: 'https://github.com/IchigoxBankai/SpendLens/releases/download/SpendLens/app-release.apk',
+    githubUrl: 'https://github.com/IchigoxBankai/SpendLens',
+    isFeatured: true,
+    isTrending: true,
+    isNew: true,
+    sha256: 'a19b8f27c44e991207e154f2a7db638e9198642a8b9f1d0034a75368a129d4c1',
+    tags: ['Flutter', 'Finance', 'Expense Tracker', 'OCR', 'Productivity', 'Android'],
+    features: [
+      'Smart Financial Insight Engine: Automated trend breakdown, category budget tracking, and predictive monthly burn rates',
+      'Offline Receipt Scanner: Instant camera OCR extraction for merchant, date, tax, and itemized transaction totals',
+      'Recurring Subscription Detector: Automatically detects and monitors recurring bills, memberships, and payment cycles',
+      'Multi-Currency & Custom Categories: Flexible budgeting with custom tag hierarchies and localized currency formatters',
+      'Zero-Telemetry Local Privacy: All transaction ledgers and receipts stay strictly encrypted on-device'
+    ],
+    screenshots: [
+      'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&auto=format&fit=crop&q=80'
+    ],
+    changelog: [
+      {
+        version: 'v1.0.0',
+        date: '19 Sep 2026',
+        notes: [
+          'Initial public release of SpendLens APK for Android',
+          'On-device OCR camera receipt scanner module',
+          'Automated recurring subscription & bill detection',
+          'Predictive spending insights & budget analytics',
+          'CSV / JSON financial ledger export support'
+        ]
+      }
+    ],
+    permissions: [
+      {
+        name: 'android.permission.CAMERA',
+        description: 'Required to scan and extract data from receipts via OCR.'
+      },
+      {
+        name: 'android.permission.READ_EXTERNAL_STORAGE',
+        description: 'Allows importing receipt images and invoice documents from device storage.'
+      },
+      {
+        name: 'android.permission.WRITE_EXTERNAL_STORAGE',
+        description: 'Used to export financial reports and backup spreadsheets.'
+      }
+    ]
   }
 ];
 
