@@ -179,9 +179,9 @@ export const APPS_DATA = [
       'Clean Album Management: Bulk organize, tag, and export screenshots effortlessly'
     ],
     screenshots: [
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80'
+      './screenshots/snapnest/home.png',
+      './screenshots/snapnest/search.png',
+      './screenshots/snapnest/collections.png'
     ],
     changelog: [
       {
