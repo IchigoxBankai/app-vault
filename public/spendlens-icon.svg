@@ -1,38 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-  <defs>
-    <linearGradient id="sl-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#EAF1EC" />
-      <stop offset="100%" stop-color="#DCE6DF" />
-    </linearGradient>
-    <linearGradient id="sl-lens" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#5B9C8D" />
-      <stop offset="100%" stop-color="#387466" />
-    </linearGradient>
-    <linearGradient id="sl-accent" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00E5FF" />
-      <stop offset="100%" stop-color="#5B9C8D" />
-    </linearGradient>
-  </defs>
+  <!-- Soft circular sage background -->
+  <circle cx="50" cy="50" r="48" fill="#E8EFEA" />
 
-  <!-- Card Background -->
-  <rect width="100" height="100" rx="22" fill="url(#sl-bg)" stroke="#CBD6CF" stroke-width="2"/>
-  
-  <!-- Outer Focus Ring (Lens) -->
-  <circle cx="48" cy="48" r="28" fill="white" stroke="#5B9C8D" stroke-width="3" />
-  <circle cx="48" cy="48" r="22" fill="none" stroke="#E1E6E2" stroke-width="1.5" stroke-dasharray="3,3" />
+  <!-- Sparkle 1: Small left sparkle -->
+  <path d="M 38 38 Q 38 42 34 42 Q 38 42 38 46 Q 38 42 42 42 Q 38 42 38 38 Z" fill="#2E5C47" />
 
-  <!-- Currency / Trend Sparkline Inside Lens -->
-  <!-- Trend Path -->
-  <path d="M34 56 L42 46 L48 50 L60 36" fill="none" stroke="url(#sl-lens)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-  
-  <!-- Peak Data Point with Glow -->
-  <circle cx="60" cy="36" r="3.5" fill="#5B9C8D" />
-  <circle cx="60" cy="36" r="6" fill="#5B9C8D" opacity="0.25" />
+  <!-- Sparkle 2: Main center-top sparkle -->
+  <path d="M 52.5 32 Q 52.5 38.5 47 38.5 Q 52.5 38.5 52.5 45 Q 52.5 38.5 58 38.5 Q 52.5 38.5 52.5 32 Z" fill="#2E5C47" />
 
-  <!-- Lens Glass Reflection Accent -->
-  <path d="M36 34 A20 20 0 0 1 58 28" fill="none" stroke="#5B9C8D" stroke-width="2" stroke-linecap="round" opacity="0.4" />
+  <!-- Connected trendline graph path -->
+  <polyline
+    points="38,58 46,47 53,55 61,45"
+    fill="none"
+    stroke="#2E5C47"
+    stroke-width="5.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
 
-  <!-- Lens Handle / Analyzer Arm -->
-  <path d="M68 68 L82 82" stroke="#387466" stroke-width="5" stroke-linecap="round" />
-  <circle cx="82" cy="82" r="3" fill="#387466" />
+  <!-- Graph Node circles -->
+  <circle cx="38" cy="58" r="4.5" fill="#2E5C47" />
+  <circle cx="46" cy="47" r="4.5" fill="#2E5C47" />
+  <circle cx="53" cy="55" r="4.5" fill="#2E5C47" />
+  <circle cx="61" cy="45" r="4.5" fill="#2E5C47" />
 </svg>
