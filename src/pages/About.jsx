@@ -118,11 +118,11 @@ export const About = () => {
   ];
 
   return (
-    <div className="pt-6 pb-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 animate-fade-in font-sans">
+    <div className="pt-4 sm:pt-6 pb-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10 animate-fade-in font-sans">
       
       {/* 1. Header */}
-      <section className="space-y-2.5 pb-5 border-b border-[#E1E6E2]">
-        <div className="flex items-center gap-1.5 text-[11px] font-bold text-[#5B9C8D] tracking-wider uppercase">
+      <section className="space-y-2.5 pb-4 sm:pb-5 border-b border-[#E1E6E2]">
+        <div className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold text-[#5B9C8D] tracking-wider uppercase">
           <Sparkles className="w-3.5 h-3.5" />
           <span>ABOUT THE BUILDER</span>
         </div>
@@ -135,14 +135,14 @@ export const About = () => {
           {DEVELOPER_INFO.title}
         </p>
 
-        <p className="text-sm sm:text-base text-[#6F7772] leading-relaxed pt-0.5">
+        <p className="text-xs sm:text-base text-[#6F7772] leading-relaxed pt-0.5">
           “I build mobile applications and web experiences focused on useful ideas, clean interfaces, and practical digital experiences.”
         </p>
       </section>
 
       {/* 2. Why I Build & Why AppVault Exists */}
-      <section className="bg-white rounded-2xl border border-[#E1E6E2] p-5 sm:p-7 shadow-sm space-y-3">
-        <h2 className="text-lg sm:text-xl font-bold text-[#202522] font-sans">
+      <section className="bg-white rounded-2xl border border-[#E1E6E2] p-4 sm:p-7 shadow-sm space-y-3">
+        <h2 className="text-base sm:text-xl font-bold text-[#202522] font-sans">
           Why AppVault exists
         </h2>
         <div className="space-y-2 text-xs sm:text-sm text-[#6F7772] leading-relaxed">
@@ -156,14 +156,14 @@ export const About = () => {
       </section>
 
       {/* 3. What I Build (4 Disciplines) */}
-      <section className="space-y-4">
+      <section className="space-y-3.5 sm:space-y-4">
         <div className="pb-2 border-b border-[#E1E6E2]">
-          <h2 className="text-lg font-bold text-[#202522] font-sans">
+          <h2 className="text-base sm:text-lg font-bold text-[#202522] font-sans">
             What I build
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5">
           {whatIBuild.map((item) => {
             const Icon = item.icon;
             return (
@@ -192,9 +192,9 @@ export const About = () => {
       </section>
 
       {/* 4. Development Philosophy & Timeline */}
-      <section className="space-y-4">
+      <section className="space-y-3.5 sm:space-y-4">
         <div className="pb-2 border-b border-[#E1E6E2]">
-          <h2 className="text-lg font-bold text-[#202522] font-sans">
+          <h2 className="text-base sm:text-lg font-bold text-[#202522] font-sans">
             Building approach
           </h2>
           <p className="text-xs text-[#6F7772]">
@@ -202,11 +202,11 @@ export const About = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3">
           {developmentApproach.map((st) => (
             <div
               key={st.step}
-              className="p-4 rounded-xl bg-white border border-[#E1E6E2] shadow-sm space-y-1.5"
+              className="p-3.5 sm:p-4 rounded-xl bg-white border border-[#E1E6E2] shadow-sm space-y-1.5"
             >
               <div className="flex items-center justify-between">
                 <span className="text-[10px] font-mono text-[#9AA19C] font-bold">{st.step}</span>
@@ -221,25 +221,25 @@ export const About = () => {
       </section>
 
       {/* 5. The Stack */}
-      <section className="space-y-4">
+      <section className="space-y-3.5 sm:space-y-4">
         <div className="pb-2 border-b border-[#E1E6E2]">
-          <h2 className="text-lg font-bold text-[#202522] font-sans">
+          <h2 className="text-base sm:text-lg font-bold text-[#202522] font-sans">
             My stack
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 text-xs">
           {techStackGroups.map((grp) => (
             <div
               key={grp.group}
-              className="bg-white rounded-xl border border-[#E1E6E2] p-4 shadow-sm space-y-2"
+              className="bg-white rounded-xl border border-[#E1E6E2] p-3.5 sm:p-4 shadow-sm space-y-2"
             >
-              <span className="text-[11px] font-bold text-[#5B9C8D] uppercase tracking-wider block font-sans">
+              <span className="text-[10px] sm:text-[11px] font-bold text-[#5B9C8D] uppercase tracking-wider block font-sans">
                 {grp.group}
               </span>
               <ul className="space-y-1 text-[#202522] font-medium">
                 {grp.items.map((item, i) => (
-                  <li key={i} className="flex items-center gap-1.5 text-xs">
+                  <li key={i} className="flex items-center gap-1.5 text-[11px] sm:text-xs">
                     <span className="text-[#5B9C8D]">•</span>
                     <span>{item}</span>
                   </li>
@@ -251,9 +251,9 @@ export const About = () => {
       </section>
 
       {/* 6. The Archive */}
-      <section className="space-y-4">
+      <section className="space-y-3.5 sm:space-y-4">
         <div className="flex items-center justify-between pb-2 border-b border-[#E1E6E2]">
-          <h2 className="text-lg font-bold text-[#202522] font-sans">
+          <h2 className="text-base sm:text-lg font-bold text-[#202522] font-sans">
             The archive
           </h2>
           <span className="text-xs text-[#6F7772] font-mono">
@@ -264,28 +264,28 @@ export const About = () => {
         <div className="divide-y divide-[#EDF0ED] bg-white rounded-2xl border border-[#E1E6E2] shadow-sm overflow-hidden">
           {allProjects.map((proj) => {
             const content = (
-              <div className="p-4 hover:bg-[#EAF1EC]/40 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 group">
-                <div className="flex items-start sm:items-center gap-3 min-w-0">
-                  <span className="font-mono text-xs text-[#9AA19C] group-hover:text-[#5B9C8D] transition-colors w-5 pt-0.5 sm:pt-0">
+              <div className="p-3.5 sm:p-4 hover:bg-[#EAF1EC]/40 active:bg-[#EAF1EC]/70 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-2 group">
+                <div className="flex items-start sm:items-center gap-2.5 sm:gap-3 min-w-0">
+                  <span className="font-mono text-xs text-[#9AA19C] group-hover:text-[#5B9C8D] transition-colors w-5 shrink-0 pt-0.5 sm:pt-0">
                     {proj.num}
                   </span>
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-sm font-bold text-[#202522] group-hover:text-[#5B9C8D] transition-colors font-sans">
+                      <span className="text-xs sm:text-sm font-bold text-[#202522] group-hover:text-[#5B9C8D] transition-colors font-sans">
                         {proj.name}
                       </span>
                       <span className="text-[9px] text-[#5B9C8D] bg-[#EAF1EC] px-1.5 py-0.2 rounded font-semibold">
                         {proj.type}
                       </span>
                     </div>
-                    <p className="text-xs text-[#6F7772] mt-0.5">
+                    <p className="text-[11px] sm:text-xs text-[#6F7772] mt-0.5 line-clamp-2 sm:line-clamp-none">
                       {proj.description}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 self-end sm:self-auto shrink-0 text-xs">
-                  <span className="text-[11px] text-[#9AA19C] hidden md:inline">
+                <div className="flex items-center justify-between sm:justify-end gap-2.5 shrink-0 text-xs pt-1 sm:pt-0 border-t sm:border-t-0 border-[#EDF0ED]/60">
+                  <span className="text-[10px] sm:text-[11px] text-[#9AA19C]">
                     {proj.tech}
                   </span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-[#9AA19C] group-hover:text-[#5B9C8D] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -313,9 +313,9 @@ export const About = () => {
       </section>
 
       {/* 7. Let's Connect */}
-      <section className="bg-white rounded-2xl border border-[#E1E6E2] p-5 sm:p-7 shadow-sm space-y-4">
+      <section className="bg-white rounded-2xl border border-[#E1E6E2] p-4 sm:p-7 shadow-sm space-y-3.5 sm:space-y-4">
         <div className="space-y-0.5">
-          <h2 className="text-lg font-bold text-[#202522] font-sans">
+          <h2 className="text-base sm:text-lg font-bold text-[#202522] font-sans">
             Let's connect
           </h2>
           <p className="text-xs text-[#6F7772]">
@@ -323,35 +323,44 @@ export const About = () => {
           </p>
         </div>
 
-        <div className="flex items-center gap-5 flex-wrap text-xs font-semibold text-[#202522]">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs font-semibold text-[#202522]">
           <a
             href={DEVELOPER_INFO.githubUrl}
             target="_blank"
             rel="noreferrer"
-            className="hover:text-[#5B9C8D] transition-colors flex items-center gap-1.5"
+            className="p-3 rounded-xl bg-[#F7F8F5] border border-[#E1E6E2] hover:bg-[#EAF1EC] active:bg-[#EDF0ED] hover:text-[#5B9C8D] transition-colors flex items-center justify-between"
           >
-            <Github className="w-4 h-4" />
-            <span>GitHub ↗</span>
+            <div className="flex items-center gap-2">
+              <Github className="w-4 h-4 text-[#5B9C8D]" />
+              <span>GitHub</span>
+            </div>
+            <ArrowUpRight className="w-3.5 h-3.5 text-[#9AA19C]" />
           </a>
 
           <a
             href={DEVELOPER_INFO.linkedinUrl}
             target="_blank"
             rel="noreferrer"
-            className="hover:text-[#5B9C8D] transition-colors flex items-center gap-1.5"
+            className="p-3 rounded-xl bg-[#F7F8F5] border border-[#E1E6E2] hover:bg-[#EAF1EC] active:bg-[#EDF0ED] hover:text-[#5B9C8D] transition-colors flex items-center justify-between"
           >
-            <Linkedin className="w-4 h-4" />
-            <span>LinkedIn ↗</span>
+            <div className="flex items-center gap-2">
+              <Linkedin className="w-4 h-4 text-[#5B9C8D]" />
+              <span>LinkedIn</span>
+            </div>
+            <ArrowUpRight className="w-3.5 h-3.5 text-[#9AA19C]" />
           </a>
 
           <a
             href={DEVELOPER_INFO.gameVaultUrl}
             target="_blank"
             rel="noreferrer"
-            className="hover:text-[#5B9C8D] transition-colors flex items-center gap-1.5"
+            className="p-3 rounded-xl bg-[#F7F8F5] border border-[#E1E6E2] hover:bg-[#EAF1EC] active:bg-[#EDF0ED] hover:text-[#5B9C8D] transition-colors flex items-center justify-between"
           >
-            <Gamepad2 className="w-4 h-4" />
-            <span>GameVault ↗</span>
+            <div className="flex items-center gap-2">
+              <Gamepad2 className="w-4 h-4 text-[#5B9C8D]" />
+              <span>GameVault</span>
+            </div>
+            <ArrowUpRight className="w-3.5 h-3.5 text-[#9AA19C]" />
           </a>
         </div>
       </section>

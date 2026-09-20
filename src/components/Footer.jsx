@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { DEVELOPER_INFO } from '../data/appsData';
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-[#E1E6E2] bg-white pt-10 pb-8 mt-12 font-sans">
+    <footer className="border-t border-[#E1E6E2] bg-white pt-8 sm:pt-10 pb-8 mt-8 sm:mt-12 font-sans">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         
         {/* Top: Identity & Navigation Columns */}
@@ -29,41 +29,41 @@ export const Footer = () => {
           </div>
 
           {/* Links Grid */}
-          <div className="flex items-start gap-10 sm:gap-14 flex-wrap text-xs">
+          <div className="grid grid-cols-2 gap-8 sm:gap-14 text-xs w-full sm:w-auto">
             
             {/* Main Nav */}
             <div className="space-y-2">
-              <span className="font-bold text-[#202522] uppercase tracking-wider block font-sans text-[11px]">
+              <span className="font-bold text-[#202522] uppercase tracking-wider block font-sans text-[10px] sm:text-[11px]">
                 Navigation
               </span>
-              <ul className="space-y-1.5 text-[#6F7772]">
+              <ul className="space-y-2 text-[#6F7772]">
                 <li>
-                  <Link to="/" className="hover:text-[#5B9C8D] transition-colors">Home</Link>
+                  <Link to="/" className="hover:text-[#5B9C8D] transition-colors py-0.5 inline-block">Home</Link>
                 </li>
                 <li>
-                  <Link to="/apps" className="hover:text-[#5B9C8D] transition-colors">My Apps</Link>
+                  <Link to="/apps" className="hover:text-[#5B9C8D] transition-colors py-0.5 inline-block">My Apps</Link>
                 </li>
                 <li>
-                  <Link to="/collections" className="hover:text-[#5B9C8D] transition-colors">Collections</Link>
+                  <Link to="/collections" className="hover:text-[#5B9C8D] transition-colors py-0.5 inline-block">Collections</Link>
                 </li>
                 <li>
-                  <Link to="/about" className="hover:text-[#5B9C8D] transition-colors">About</Link>
+                  <Link to="/about" className="hover:text-[#5B9C8D] transition-colors py-0.5 inline-block">About</Link>
                 </li>
               </ul>
             </div>
 
             {/* External / Connect */}
             <div className="space-y-2">
-              <span className="font-bold text-[#202522] uppercase tracking-wider block font-sans text-[11px]">
+              <span className="font-bold text-[#202522] uppercase tracking-wider block font-sans text-[10px] sm:text-[11px]">
                 Connect
               </span>
-              <ul className="space-y-1.5 text-[#6F7772]">
+              <ul className="space-y-2 text-[#6F7772]">
                 <li>
                   <a
                     href={DEVELOPER_INFO.gameVaultUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-[#5B9C8D] transition-colors flex items-center gap-1"
+                    className="hover:text-[#5B9C8D] transition-colors flex items-center gap-1 py-0.5"
                   >
                     <span>GameVault</span>
                     <ArrowUpRight className="w-3 h-3 text-[#9AA19C]" />
@@ -74,7 +74,7 @@ export const Footer = () => {
                     href={DEVELOPER_INFO.githubUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-[#5B9C8D] transition-colors flex items-center gap-1"
+                    className="hover:text-[#5B9C8D] transition-colors flex items-center gap-1 py-0.5"
                   >
                     <span>GitHub</span>
                     <ArrowUpRight className="w-3 h-3 text-[#9AA19C]" />
@@ -85,7 +85,7 @@ export const Footer = () => {
                     href={DEVELOPER_INFO.linkedinUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-[#5B9C8D] transition-colors flex items-center gap-1"
+                    className="hover:text-[#5B9C8D] transition-colors flex items-center gap-1 py-0.5"
                   >
                     <span>LinkedIn</span>
                     <ArrowUpRight className="w-3 h-3 text-[#9AA19C]" />
@@ -99,7 +99,7 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar: Copyright */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#6F7772]">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs text-[#6F7772] text-center sm:text-left">
           <p>© 2026 {DEVELOPER_INFO.name}. All rights reserved.</p>
           <p className="flex items-center gap-1.5 text-[11px]">
             <span>Built with React, Vite & Tailwind CSS</span>

@@ -127,9 +127,9 @@ export const SplashScreen = ({ onFinish }) => {
             <div className="absolute w-28 h-28 rounded-3xl bg-[#5B9C8D]/15 animate-pulse-expand pointer-events-none" />
           )}
 
-          {/* Logo Card with Smooth Ease-Out & Floating Movement */}
+        {/* Logo Card with Smooth Ease-Out & Floating Movement */}
           <div
-            className={`relative w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-white border border-[#E1E6E2] shadow-[0_12px_32px_rgba(40,65,50,0.06)] p-3.5 flex items-center justify-center transition-all duration-700 ${
+            className={`relative w-20 h-20 sm:w-28 sm:h-28 rounded-2xl sm:rounded-3xl bg-white border border-[#E1E6E2] shadow-[0_12px_32px_rgba(40,65,50,0.06)] p-3 sm:p-3.5 flex items-center justify-center transition-all duration-700 ${
               logoVisible
                 ? 'opacity-100 scale-100 animate-float-gentle'
                 : 'opacity-0 scale-[0.85]'
@@ -139,7 +139,7 @@ export const SplashScreen = ({ onFinish }) => {
             }}
           >
             {/* Very Subtle Shimmer Highlight Sweep */}
-            <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
+            <div className="absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden pointer-events-none">
               <div
                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full"
                 style={{
@@ -159,11 +159,11 @@ export const SplashScreen = ({ onFinish }) => {
         </div>
 
         {/* 4. BRAND REVEAL: AppVault Title + Badge + Subtitle */}
-        <div className="space-y-2">
+        <div className="space-y-1.5 sm:space-y-2">
           {/* Title & Badge */}
           <div className="flex items-center justify-center gap-2">
             <h1
-              className={`text-2xl sm:text-3xl font-bold tracking-tight text-[#202522] transition-all duration-600 ${
+              className={`text-xl sm:text-3xl font-bold tracking-tight text-[#202522] transition-all duration-600 ${
                 brandVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-2'
@@ -174,7 +174,7 @@ export const SplashScreen = ({ onFinish }) => {
 
             {/* Version Badge */}
             <span
-              className={`text-[11px] font-medium text-[#5B9C8D] bg-[#EAF1EC] px-2 py-0.5 rounded-full border border-[#D5E2D9] transition-all duration-500 ${
+              className={`text-[10px] sm:text-[11px] font-medium text-[#5B9C8D] bg-[#EAF1EC] px-2 py-0.5 rounded-full border border-[#D5E2D9] transition-all duration-500 ${
                 badgeVisible
                   ? 'opacity-100 translate-y-0 scale-100'
                   : 'opacity-0 translate-y-1 scale-90'
@@ -186,7 +186,7 @@ export const SplashScreen = ({ onFinish }) => {
 
           {/* Subtitle */}
           <p
-            className={`text-xs sm:text-[13px] text-[#6F7772] font-normal leading-relaxed max-w-[280px] sm:max-w-none transition-all duration-600 ${
+            className={`text-xs sm:text-[13px] text-[#6F7772] font-normal leading-relaxed max-w-[260px] sm:max-w-none transition-all duration-600 ${
               subtitleVisible
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-2'

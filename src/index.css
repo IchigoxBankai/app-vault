@@ -20,12 +20,18 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   #root {
     background-color: #F7F8F5 !important;
     color: #202522 !important;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -37,10 +43,15 @@
     color: #6F7772;
   }
 
+  /* Touch interaction polish */
+  button, a, input, select, textarea {
+    touch-action: manipulation;
+  }
+
   /* Smooth scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
 
   ::-webkit-scrollbar-track {
@@ -63,6 +74,25 @@
     background-image: radial-gradient(#5B9C8D 0.6px, transparent 0.6px);
     background-size: 28px 28px;
     opacity: 0.18;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Safe area padding utilities for mobile notches */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 1rem);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 1rem);
   }
 
   /* Soft card */

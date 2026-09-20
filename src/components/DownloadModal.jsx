@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import confetti from 'canvas-confetti';
 import { 
@@ -18,6 +18,18 @@ export const DownloadModal = ({ app, isOpen, onClose }) => {
   const [isDownloading, setIsDownloading] = useState(false);
   const [activeTab, setActiveTab] = useState('direct'); // 'direct' or 'qr'
   const { addToast } = useToast();
+
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   if (!isOpen || !app) return null;
 
@@ -60,50 +72,51 @@ export const DownloadModal = ({ app, isOpen, onClose }) => {
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-fade-in font-sans"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/50 backdrop-blur-sm animate-fade-in font-sans"
       onClick={onClose}
     >
       <div 
-        className="relative w-full max-w-lg rounded-2xl bg-white border border-[#E1E6E2] shadow-2xl overflow-hidden animate-scale-up"
+        className="relative w-full max-w-lg rounded-2xl bg-white border border-[#E1E6E2] shadow-2xl overflow-hidden animate-scale-up max-h-[90vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Bar */}
-        <div className="flex items-center justify-between p-4 border-b border-[#EDF0ED] bg-white">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-[#5B9C8D]" />
-            <span className="text-sm font-bold text-[#202522] font-sans">
+        <div className="flex items-center justify-between p-3.5 sm:p-4 border-b border-[#EDF0ED] bg-white shrink-0">
+          <div className="flex items-center gap-2 min-w-0">
+            <Sparkles className="w-4 h-4 text-[#5B9C8D] shrink-0" />
+            <span className="text-xs sm:text-sm font-bold text-[#202522] font-sans truncate">
               Download Application Package
             </span>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-[#6F7772] hover:text-[#202522] hover:bg-[#EAF1EC] transition-colors"
+            className="p-1.5 rounded-lg text-[#6F7772] hover:text-[#202522] hover:bg-[#EAF1EC] active:bg-[#EDF0ED] transition-colors shrink-0 ml-2"
+            aria-label="Close modal"
           >
             <X className="w-4 h-4" />
           </button>
         </div>
 
-        <div className="p-5 space-y-4 bg-white">
+        <div className="p-4 sm:p-5 space-y-4 bg-white overflow-y-auto">
           {/* App Info */}
-          <div className="flex items-start gap-3.5">
+          <div className="flex items-start gap-3 sm:gap-3.5">
             <img
               src={app.icon}
               alt={app.name}
-              className="w-12 h-12 rounded-xl object-cover border border-[#E1E6E2] shrink-0 shadow-sm bg-white"
+              className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl object-cover border border-[#E1E6E2] shrink-0 shadow-sm bg-white"
             />
             <div className="min-w-0 flex-1">
-              <div className="flex items-center gap-2">
-                <span className="text-base font-bold text-[#202522] font-sans truncate">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-sm sm:text-base font-bold text-[#202522] font-sans truncate">
                   {app.name}
                 </span>
-                <span className="px-2 py-0.2 rounded-full text-[11px] font-semibold bg-[#EAF1EC] text-[#5B9C8D]">
+                <span className="px-2 py-0.2 rounded-full text-[10px] sm:text-[11px] font-semibold bg-[#EAF1EC] text-[#5B9C8D]">
                   v{app.version}
                 </span>
               </div>
-              <p className="text-xs text-[#6F7772] truncate mt-0.5 font-mono">
+              <p className="text-[11px] text-[#6F7772] truncate mt-0.5 font-mono">
                 {app.packageName}
               </p>
-              <div className="flex items-center gap-2 text-xs text-[#6F7772] mt-0.5">
+              <div className="flex items-center gap-2 text-[11px] text-[#6F7772] mt-0.5 font-mono">
                 <span>{app.size || 'APK'}</span>
                 <span>•</span>
                 <span>{app.minAndroid || 'Android 8.0+'}</span>
@@ -115,7 +128,7 @@ export const DownloadModal = ({ app, isOpen, onClose }) => {
           <div className="grid grid-cols-2 gap-1 p-1 bg-[#F7F8F5] rounded-xl border border-[#E1E6E2] text-xs">
             <button
               onClick={() => setActiveTab('direct')}
-              className={`py-1.5 rounded-lg font-semibold transition-all ${
+              className={`py-2 rounded-lg font-semibold transition-all ${
                 activeTab === 'direct'
                   ? 'bg-white text-[#202522] shadow-sm'
                   : 'text-[#6F7772] hover:text-[#202522]'
@@ -125,7 +138,7 @@ export const DownloadModal = ({ app, isOpen, onClose }) => {
             </button>
             <button
               onClick={() => setActiveTab('qr')}
-              className={`py-1.5 rounded-lg font-semibold transition-all ${
+              className={`py-2 rounded-lg font-semibold transition-all ${
                 activeTab === 'qr'
                   ? 'bg-white text-[#202522] shadow-sm'
                   : 'text-[#6F7772] hover:text-[#202522]'
@@ -141,7 +154,7 @@ export const DownloadModal = ({ app, isOpen, onClose }) => {
               <button
                 onClick={handleTriggerDownload}
                 disabled={isDownloading}
-                className="w-full py-3 rounded-xl bg-[#5B9C8D] text-white font-semibold text-xs sm:text-sm hover:bg-[#4e897b] shadow-sm transition-all flex items-center justify-center gap-2"
+                className="w-full py-3 sm:py-3 rounded-xl bg-[#5B9C8D] active:bg-[#4e897b] text-white font-semibold text-xs sm:text-sm hover:bg-[#4e897b] shadow-sm transition-all flex items-center justify-center gap-2"
               >
                 <Download className="w-4 h-4" />
                 <span>Download APK ({app.size || 'Release'})</span>
@@ -154,7 +167,7 @@ export const DownloadModal = ({ app, isOpen, onClose }) => {
                     <span className="font-semibold text-[10px] uppercase">SHA-256 Checksum</span>
                     <button
                       onClick={handleCopySha}
-                      className="text-[#5B9C8D] hover:underline flex items-center gap-1 font-medium"
+                      className="text-[#5B9C8D] hover:underline flex items-center gap-1 font-medium py-0.5"
                     >
                       {copiedSha ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
                       <span>{copiedSha ? 'Copied' : 'Copy'}</span>
@@ -174,12 +187,12 @@ export const DownloadModal = ({ app, isOpen, onClose }) => {
               <div className="p-3 bg-[#F7F8F5] border border-[#E1E6E2] rounded-xl inline-block shadow-sm">
                 <QRCodeSVG
                   value={app.apkUrl}
-                  size={140}
+                  size={135}
                   level="M"
                   includeMargin={false}
                 />
               </div>
-              <p className="text-xs text-[#6F7772]">
+              <p className="text-xs text-[#6F7772] max-w-xs mx-auto">
                 Scan this QR code with your Android device camera to download the APK directly.
               </p>
             </div>

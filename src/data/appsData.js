@@ -281,6 +281,84 @@ export const APPS_DATA = [
         description: 'Used to export financial reports and backup spreadsheets.'
       }
     ]
+  },
+  {
+    id: 'pulse',
+    name: 'Pulse',
+    tagline: 'Real-Time Intelligent Chat, Topic Organization & Integrated Reminder Hub',
+    description: 'Pulse is a modern, high-performance messaging app built with Flutter, Riverpod, and Cloud Firestore. Designed for streamlined communication, Pulse features organized topic threads, crystal-clear voice notes with interactive waveform visualizers, context-aware in-chat reminders, ephemeral story updates, and peer voice/video calls.',
+    icon: './pulse-logo.png',
+    banner: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=1200&auto=format&fit=crop&q=80',
+    category: 'social',
+    techStack: ['Flutter', 'Dart', 'Riverpod', 'Cloud Firestore', 'Firebase Auth', 'Material 3'],
+    version: '1.0.0',
+    versionCode: 1,
+    size: '60.20 MB',
+    sizeBytes: 63128571,
+    developer: 'Nihar Puthran',
+    packageName: 'com.pulse.app.pulse',
+    minAndroid: 'Android 8.0 (API 26+)',
+    targetAndroid: 'Android 14 (API 34)',
+    architecture: 'Universal',
+    releaseDate: '20 Sep 2026',
+    lastUpdated: '20 Sep 2026',
+    rating: 5.0,
+    reviewCount: 18,
+    downloads: '250+',
+    status: 'Completed',
+    apkUrl: 'https://github.com/IchigoxBankai/Pulse/releases/download/Pulse/app-release.apk',
+    githubUrl: 'https://github.com/IchigoxBankai/Pulse',
+    isFeatured: true,
+    isTrending: true,
+    isNew: true,
+    sha256: 'a0061dd5bf9156c78976429f72b9c1d2b2ceb3da0f246824e8079590c9c0ec38',
+    tags: ['Flutter', 'Chat', 'Messaging', 'Social', 'Firebase', 'Real-Time', 'Android'],
+    features: [
+      'Real-Time Chat & Multi-User Groups: Seamless messaging with instant delivery, typing indicators, and read states via Cloud Firestore',
+      'Topic-Based Chat Organization: Divide busy group chats and conversations into focused sub-topics to keep context organized',
+      'Voice Messaging with Waveforms: Record voice notes with smooth interactive audio waveform playback visualizations',
+      'Smart In-Chat Reminder Scheduling: Create and trigger contextual reminders directly within chats and direct messages',
+      'Stories & Ephemeral Status: Share rich multimedia stories, text updates, and moments with your network',
+      'Voice & Video Calls: Built-in audio and video calling interface with incoming call overlay alerts',
+      'Saved Messages Vault: Bookmark important messages, media links, and attachments in a dedicated fast-retrieval hub'
+    ],
+    screenshots: [],
+    changelog: [
+      {
+        version: 'v1.0.0',
+        date: '20 Sep 2026',
+        notes: [
+          'Initial public release of Pulse APK for Android',
+          'Real-time messaging backend powered by Cloud Firestore and Riverpod',
+          'Categorized chat topic threads and channel organization',
+          'Voice recording module with dynamic audio waveforms',
+          'In-app reminder notifications and scheduling engine',
+          'Ephemeral multimedia status and stories viewer'
+        ]
+      }
+    ],
+    permissions: [
+      {
+        name: 'android.permission.INTERNET',
+        description: 'Required to send and receive real-time messages and sync chats via Firebase.'
+      },
+      {
+        name: 'android.permission.RECORD_AUDIO',
+        description: 'Allows recording voice notes and participating in audio/video calls.'
+      },
+      {
+        name: 'android.permission.POST_NOTIFICATIONS',
+        description: 'Sends alerts for incoming messages, call notifications, and scheduled reminders.'
+      },
+      {
+        name: 'android.permission.SCHEDULE_EXACT_ALARM',
+        description: 'Used to fire exact time-sensitive reminder notifications reliably.'
+      },
+      {
+        name: 'android.permission.READ_EXTERNAL_STORAGE',
+        description: 'Allows selecting media, photos, and files to share in conversations.'
+      }
+    ]
   }
 ];
 

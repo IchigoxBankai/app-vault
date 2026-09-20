@@ -9,7 +9,7 @@ export const FeaturedProject = ({ onDownload }) => {
   if (!featured) return null;
 
   return (
-    <section className="py-6 sm:py-8">
+    <section className="py-4 sm:py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -20,8 +20,8 @@ export const FeaturedProject = ({ onDownload }) => {
               Featured project
             </h2>
           </div>
-          <span className="text-[11px] font-semibold text-[#6F7772] uppercase tracking-wider">
-            Flagship Android Build
+          <span className="text-[10px] sm:text-[11px] font-semibold text-[#6F7772] uppercase tracking-wider">
+            Flagship Build
           </span>
         </div>
 
@@ -34,7 +34,7 @@ export const FeaturedProject = ({ onDownload }) => {
               <img
                 src={featured.banner || featured.icon}
                 alt={featured.name}
-                className="w-full h-48 sm:h-56 object-cover object-center rounded-xl group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-44 sm:h-56 object-cover object-center rounded-xl group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-lg border border-[#E1E6E2] text-xs font-semibold text-[#202522] shadow-sm flex items-center gap-1.5">
                 <img src={featured.icon} alt="" className="w-3.5 h-3.5 rounded" />
@@ -43,14 +43,14 @@ export const FeaturedProject = ({ onDownload }) => {
             </div>
 
             {/* Right: Editorial Information */}
-            <div className="md:col-span-7 space-y-4">
+            <div className="md:col-span-7 space-y-3 sm:space-y-4">
               
               {/* Category & Version */}
-              <div className="flex items-center gap-2">
-                <span className="px-2.5 py-0.5 rounded-full bg-[#EAF1EC] text-[#5B9C8D] text-[11px] font-semibold uppercase tracking-wider">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="px-2.5 py-0.5 rounded-full bg-[#EAF1EC] text-[#5B9C8D] text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider">
                   {featured.category}
                 </span>
-                <span className="text-[11px] text-[#6F7772] font-medium">
+                <span className="text-[11px] text-[#6F7772] font-medium font-mono">
                   v{featured.version} · {featured.size}
                 </span>
               </div>
@@ -71,14 +71,14 @@ export const FeaturedProject = ({ onDownload }) => {
               </p>
 
               {/* Tech Stack Pills (Light Soft Sage) */}
-              <div className="pt-2 border-t border-[#EDF0ED] flex items-center gap-2 flex-wrap">
-                <span className="text-[11px] font-semibold text-[#6F7772] uppercase tracking-wider mr-1">
+              <div className="pt-2 border-t border-[#EDF0ED] flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                <span className="text-[10px] sm:text-[11px] font-semibold text-[#6F7772] uppercase tracking-wider mr-1">
                   Built With:
                 </span>
                 {featured.techStack?.map((tech) => (
                   <span
                     key={tech}
-                    className="px-2 py-0.5 rounded-md bg-[#EAF1EC] border border-[#E1E6E2] text-[11px] font-medium text-[#202522]"
+                    className="px-2 py-0.5 rounded-md bg-[#EAF1EC] border border-[#E1E6E2] text-[10px] sm:text-[11px] font-medium text-[#202522]"
                   >
                     {tech}
                   </span>
@@ -86,10 +86,10 @@ export const FeaturedProject = ({ onDownload }) => {
               </div>
 
               {/* Action Buttons */}
-              <div className="pt-1 flex flex-wrap items-center gap-2.5">
+              <div className="pt-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
                 <Link
                   to={`/app/${featured.id}`}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#202522] text-white text-xs font-semibold hover:bg-[#343d37] shadow-sm transition-all"
+                  className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 sm:py-2 rounded-xl bg-[#202522] text-white text-xs font-semibold hover:bg-[#343d37] active:bg-[#1a1f1b] shadow-sm transition-all text-center"
                 >
                   <span>View project</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -97,7 +97,7 @@ export const FeaturedProject = ({ onDownload }) => {
 
                 <button
                   onClick={() => onDownload && onDownload(featured)}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#EAF1EC] text-[#5B9C8D] border border-[#5B9C8D]/30 text-xs font-semibold hover:bg-[#5B9C8D] hover:text-white transition-all shadow-sm"
+                  className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 sm:py-2 rounded-xl bg-[#EAF1EC] text-[#5B9C8D] border border-[#5B9C8D]/30 text-xs font-semibold hover:bg-[#5B9C8D] hover:text-white active:bg-[#4e897b] transition-all shadow-sm text-center"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>Download APK</span>
