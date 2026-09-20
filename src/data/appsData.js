@@ -288,7 +288,7 @@ export const APPS_DATA = [
     tagline: 'Real-Time Intelligent Chat, Topic Organization & Integrated Reminder Hub',
     description: 'Pulse is a modern, high-performance messaging app built with Flutter, Riverpod, and Cloud Firestore. Designed for streamlined communication, Pulse features organized topic threads, crystal-clear voice notes with interactive waveform visualizers, context-aware in-chat reminders, ephemeral story updates, and peer voice/video calls.',
     icon: './pulse-logo.png',
-    banner: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=1200&auto=format&fit=crop&q=80',
+    banner: './pulse-banner.jpg',
     category: 'social',
     techStack: ['Flutter', 'Dart', 'Riverpod', 'Cloud Firestore', 'Firebase Auth', 'Material 3'],
     version: '1.0.0',
