@@ -6,7 +6,7 @@ export const COLLECTIONS_DATA = [
     tagline: 'Flagship mobile applications and core projects',
     description: 'Highlighted applications and featured Android tools.',
     color: '#00E5FF',
-    appIds: ['pulse', 'cooklet', 'snapnest', 'spendlens'],
+    appIds: ['docsy', 'pulse', 'cooklet', 'snapnest', 'spendlens'],
     badge: 'Featured',
   },
   {
@@ -16,7 +16,7 @@ export const COLLECTIONS_DATA = [
     tagline: 'Productivity, expense tracking, and daily utility applications',
     description: 'Tools designed for personal finance tracking, OCR text extraction, and daily utilities.',
     color: '#3A86FF',
-    appIds: ['spendlens', 'snapnest'],
+    appIds: ['docsy', 'spendlens', 'snapnest'],
     badge: 'Tools',
   },
 ];

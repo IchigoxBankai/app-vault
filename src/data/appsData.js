@@ -359,6 +359,70 @@ export const APPS_DATA = [
         description: 'Allows selecting media, photos, and files to share in conversations.'
       }
     ]
+  },
+  {
+    id: 'docsy',
+    name: 'Docsy',
+    tagline: 'Offline PDF Toolkit, High-Speed Document Converter & Smart Page Manager',
+    description: 'Docsy is a versatile, offline-first PDF and document processing studio built with Flutter. It lets you convert images and documents to high-resolution PDFs, compress heavy PDF files, merge and split pages, extract images, and view documents seamlessly with zero cloud tracking or telemetry.',
+    icon: 'https://raw.githubusercontent.com/IchigoxBankai/docsy/main/assets/images/app_logo.png',
+    banner: 'https://images.unsplash.com/photo-1568667256549-094345857637?w=1200&auto=format&fit=crop&q=80',
+    category: 'productivity',
+    techStack: ['Flutter', 'Dart', 'Syncfusion PDF', 'PDFx', 'Path Provider', 'Material 3'],
+    version: '1.0.0',
+    versionCode: 1,
+    size: '58.61 MB',
+    sizeBytes: 61457456,
+    developer: 'Nihar Puthran',
+    packageName: 'com.docuflow.app.docuflow',
+    minAndroid: 'Android 8.0 (API 26+)',
+    targetAndroid: 'Android 14 (API 34)',
+    architecture: 'Universal',
+    releaseDate: '22 Sep 2026',
+    lastUpdated: '22 Sep 2026',
+    rating: 5.0,
+    reviewCount: 16,
+    downloads: '200+',
+    status: 'Completed',
+    apkUrl: 'https://github.com/IchigoxBankai/docsy/releases/download/docsy/app-release.apk',
+    githubUrl: 'https://github.com/IchigoxBankai/docsy',
+    isFeatured: true,
+    isTrending: true,
+    isNew: true,
+    sha256: '2c17c75cc207ddc4d57648595d4febce35348d6b6d34b9373fdb8ac22bcd6f87',
+    tags: ['Flutter', 'PDF', 'Document Converter', 'Compression', 'Productivity', 'Android'],
+    features: [
+      'Fast Image & Text to PDF: Convert camera captures, photos, and formatted notes into crisp PDF documents',
+      'Advanced PDF Compression: Shrink file sizes significantly while preserving clean document readability',
+      'Merge & Split Suite: Combine multiple PDF files or extract targeted page ranges in seconds',
+      'PDF-to-Image Extractor: Render and export individual PDF pages as high-quality PNG or JPEG images',
+      'Offline Document Viewer: Smooth multi-page document viewer with gesture zoom, dark theme, and bookmarking',
+      'Complete Device Privacy: 100% on-device local execution without uploading documents to remote cloud servers'
+    ],
+    screenshots: [],
+    changelog: [
+      {
+        version: 'v1.0.0',
+        date: '22 Sep 2026',
+        notes: [
+          'Initial public release of Docsy APK for Android',
+          'Offline PDF creation and image-to-PDF conversion engine',
+          'PDF compression, merging, and page splitting modules',
+          'Built-in gesture-supported high performance PDF reader',
+          'Zero-telemetry on-device processing and local file storage'
+        ]
+      }
+    ],
+    permissions: [
+      {
+        name: 'android.permission.READ_EXTERNAL_STORAGE',
+        description: 'Allows selecting documents, PDF files, and images to convert or process.'
+      },
+      {
+        name: 'android.permission.WRITE_EXTERNAL_STORAGE',
+        description: 'Allows saving converted PDFs and exported image files to local storage.'
+      }
+    ]
   }
 ];
 
